@@ -1,1 +1,1 @@
-# TQS_107548
+# TQS Pratical Classes Repository
