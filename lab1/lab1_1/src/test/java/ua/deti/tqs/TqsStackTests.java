@@ -1,5 +1,7 @@
 package ua.deti.tqs;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ua.deti.tqs.TqsStackSkeleton;
@@ -11,6 +13,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TqsStackTests {
     private TqsStackSkeleton<String> stack = new TqsStackSkeleton<String>() ;
+    private TqsStackSkeleton<String> stack_bound = new TqsStackSkeleton<String>(7) ;
+
+    @AfterEach
+    public void cleanStack(){
+        stack.cleanStack();
+        stack_bound.cleanStack();
+    }
 
     @DisplayName("1st")
     @Test
@@ -48,7 +57,45 @@ public class TqsStackTests {
     void pushThenPeek() {
         stack.push("mina");
         int stack_size_after_push = stack.size();
-        stack.peek();
+        Object x = stack.peek();
         assertEquals(stack_size_after_push, stack.size(), "Push Then Peek Size Not The Same");
+        assertEquals("mina", x, "Value Not The Same");
+    }
+
+    @DisplayName("6th")
+    @Test
+    void afterNPops() {
+        int stack_size = stack.size();
+        for (int i = 0; i <= stack_size; i++) {
+            stack.pop();
+        }
+
+        assertTrue(stack.size() == 0, "After N Pops Size Not 0");
+        assertTrue(stack.isEmpty(), "After N Pops Stack Is Not Empty");
+    }
+
+    @DisplayName("7th")
+    @Test
+    void popFromEmptyStackNoSuchElementException() {
+       assertThrows(NoSuchElementException.class, () -> {
+            stack.pop();
+       }, "No Such Element Exception Not Thrown When Popping From Empty Stack");
+    }
+
+    @DisplayName("8th")
+    @Test
+    void peekFromEmptyStackNoSuchElementException() {
+        assertThrows(NoSuchElementException.class, () -> {
+            stack.peek();
+        }, "No Such Element Exception Not Thrown When Peeking From Empty Stack");
+    }
+
+    @DisplayName("9th")
+    @Test
+    void pushOntoFullStackNoSuchStateException(){
+        for (int j = 0; j <= stack_bound.getLimit(); j++){
+            stack_bound.push("louca");
+        }
+        assertThrows(IllegalStateException.class, () -> stack_bound.push("não"), "IllegalStateException Not Thrown When Pushing Onto Full Stack");
     }
 }
