@@ -30,7 +30,7 @@ public class TqsStackTests {
     @DisplayName("2nd")
     @Test
     void size0OnConstruction() {
-        assertEquals(0,stack.isEmpty(), "Size Not 0");
+        assertEquals(0,stack.size(), "Size Not 0");
     }
 
     @DisplayName("3rd")
@@ -65,6 +65,10 @@ public class TqsStackTests {
     @DisplayName("6th")
     @Test
     void afterNPops() {
+        stack.push("um");
+        stack.push("dois");
+        stack.push("tres");
+        stack.push("quatro");
         Integer stack_size = stack.size();
         for (Integer i = 0; i <= stack_size; i++) {
             stack.pop();

@@ -1,9 +1,11 @@
 package ua.deti.tqs;
 
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
+
 public class TqsStackSkeleton<T> {
     private LinkedList<T> stack;
-    private int limit;
+    private Integer limit;
 
     public TqsStackSkeleton(){
         this.stack = new LinkedList<T>();
@@ -19,11 +21,17 @@ public class TqsStackSkeleton<T> {
     }
 
     public void push(T x){
+        if (limit != null && stack.size() >= limit.intValue()){
+            throw new IllegalStateException();
+        }
         stack.addFirst(x);
     }
 
     public T pop(){
-        return stack.pop();
+        if (stack.isEmpty()){
+            throw new NoSuchElementException();
+        }
+        return stack.remove();
     }
 
     public Integer size() {
@@ -31,12 +39,14 @@ public class TqsStackSkeleton<T> {
     }
 
     public T peek() {
+        if (stack.isEmpty()){
+            throw new NoSuchElementException();
+        }
         return stack.peekFirst();
     }
 
     public boolean isEmpty() {
-        if (stack.size() == 0) {return true;}
-        else {return ;}
+        return stack.isEmpty();
     }
 
     public boolean cleanStack() {
