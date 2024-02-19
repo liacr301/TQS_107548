@@ -65,8 +65,8 @@ public class TqsStackTests {
     @DisplayName("6th")
     @Test
     void afterNPops() {
-        int stack_size = stack.size();
-        for (int i = 0; i <= stack_size; i++) {
+        Integer stack_size = stack.size();
+        for (Integer i = 0; i <= stack_size; i++) {
             stack.pop();
         }
 
@@ -93,7 +93,7 @@ public class TqsStackTests {
     @DisplayName("9th")
     @Test
     void pushOntoFullStackNoSuchStateException(){
-        for (int j = 0; j <= stack_bound.getLimit(); j++){
+        for (Integer j = 0; j <= stack_bound.getLimit(); j++){
             stack_bound.push("louca");
         }
         assertThrows(IllegalStateException.class, () -> stack_bound.push("não"), "IllegalStateException Not Thrown When Pushing Onto Full Stack");

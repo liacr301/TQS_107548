@@ -9,22 +9,35 @@ public class TqsStackSkeleton<T> {
         this.stack = new LinkedList<T>();
     }
 
-    public TqsStackSkeleton(int limit) {
+    public TqsStackSkeleton(Integer limit) {
         this.stack = new LinkedList<T>();
         this.limit = limit;
     }
 
-    public int getLimit(){}
+    public Integer getLimit(){
+        return limit;
+    }
 
-    public void push(T x){}
+    public void push(T x){
+        stack.addFirst(x);
+    }
 
-    public T pop(){}
+    public T pop(){
+        return stack.pop();
+    }
 
-    public int size() {}
+    public Integer size() {
+        return stack.size();
+    }
 
-    public T peek() {}
+    public T peek() {
+        return stack.peekFirst();
+    }
 
-    public boolean isEmpty() {}
+    public boolean isEmpty() {
+        if (stack.size() == 0) {return true;}
+        else {return ;}
+    }
 
     public boolean cleanStack() {
         return this.stack.removeAll(this.stack);
