@@ -12,8 +12,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 public class TqsStackTests {
-    private TqsStackSkeleton<String> stack = new TqsStackSkeleton<String>() ;
-    private TqsStackSkeleton<String> stack_bound = new TqsStackSkeleton<String>(7) ;
+
+    private TqsStackSkeleton<String> stack;
+    private TqsStackSkeleton<String> stack_bound;
+
+    @BeforeEach
+    public void createStack(){
+        this.stack = new TqsStackSkeleton<>();
+        this.stack_bound = new TqsStackSkeleton<>(7);
+    }
 
     @AfterEach
     public void cleanStack(){
@@ -70,7 +77,7 @@ public class TqsStackTests {
         stack.push("tres");
         stack.push("quatro");
         Integer stack_size = stack.size();
-        for (Integer i = 0; i <= stack_size; i++) {
+        for (Integer i = 0; i < stack_size; i++) {
             stack.pop();
         }
 
@@ -97,7 +104,7 @@ public class TqsStackTests {
     @DisplayName("9th")
     @Test
     void pushOntoFullStackNoSuchStateException(){
-        for (Integer j = 0; j <= stack_bound.getLimit(); j++){
+        for (Integer j = 0; j < stack_bound.getLimit(); j++){
             stack_bound.push("louca");
         }
         assertThrows(IllegalStateException.class, () -> stack_bound.push("não"), "IllegalStateException Not Thrown When Pushing Onto Full Stack");
