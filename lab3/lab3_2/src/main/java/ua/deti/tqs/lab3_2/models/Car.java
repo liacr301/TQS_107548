@@ -1,6 +1,6 @@
 package ua.deti.tqs.lab3_2.models;
 
-import import jakarta.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "tqs_car")
