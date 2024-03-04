@@ -3,7 +3,6 @@ package ua.deti.tqs.lab3_2.services;
 import org.springframework.stereotype.Service;
 import ua.deti.tqs.lab3_2.models.Car;
 import ua.deti.tqs.lab3_2.dao.CarRepository;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
