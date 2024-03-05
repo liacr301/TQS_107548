@@ -13,8 +13,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.TestPropertySource;
-import deti.ua.tqs.lab3_2.models.Car;
-import deti.ua.tqs.lab3_2.dao.CarRepository;
+import ua.deti.tqs.lab3_2.models.Car;
+import ua.deti.tqs.lab3_2.dao.CarRepository;
 
 
 import java.util.List;
@@ -44,7 +44,7 @@ public class CarControllerTestIT{
         Car car_1 = new Car("BMW", "M4");
         ResponseEntity<Car> entity = restTemplate.postForEntity("/api/car", car_1, Car.class);
 
-        List<Car> found = repository.findAll();
+        List<Car> found = carRepository.findAll();
         assertThat(found).extracting(Car::getModel).containsOnly("M4");
     }
 
