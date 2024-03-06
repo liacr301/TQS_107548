@@ -22,7 +22,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-@AutoConfigureTestDatabase
+@TestPropertySource(locations = "application-integrationtest.properties")
 public class CarControllerTestIT{
 
     @LocalServerPort
