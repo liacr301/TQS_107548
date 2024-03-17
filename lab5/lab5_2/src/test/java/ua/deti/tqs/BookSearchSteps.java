@@ -1,10 +1,13 @@
 package ua.deti.tqs;
 
+import java.time.Instant;
 import java.util.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 import java.time.LocalDateTime;
+import java.util.Map;
+import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,9 +28,24 @@ public class BookSearchSteps {
         return LocalDateTime.of(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day),0, 0);
     }
 
-    @Given("a book with the title {string}, written by {string}, published in {iso8601Date}")
-    public void addNewBook(final String title, final String author, LocalDateTime published) {
-        Date published_date = Date.from(published.toInstant(ZoneOffset.UTC));
-        Book book = new Book(title, author, published_date);
-        library.addBook(book);
+    @DataTableType
+    public Book bookEntry(Map<String, String> entry) {
+        LocalDateTime publicationDate = LocalDateTime.parse(entry.get("publication_date"));
+        Instant instant = publicationDate.atZone(ZoneId.systemDefault()).toInstant();
+        Date publicationDate_converted = Date.from(instant);
+        return new Book(
+                entry.get("title"),
+                entry.get("author"),
+                publicationDate_converted,
+                entry.get("category"));
+    }
+
+    @Given("I have a library with the following books list$")
+    public void haveBooksInTheStoreByList(DataTable table) {
+
+        List<List<String>> rows = table.asLists(String.class);
+
+        for (List<String> columns : rows) {
+            store.addBook(new Book(columns.get(0), columns.get(1), columns.get(2), columns.get(3)));
+        }
     }

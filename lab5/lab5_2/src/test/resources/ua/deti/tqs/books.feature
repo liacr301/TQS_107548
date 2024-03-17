@@ -3,7 +3,7 @@
 Feature: Searching Books
 
      Background: A Library
-        Given the library has the following books:
+        Given I have a library with the following books:
                 | title                                | author      | publication_date | category
                 | The Devil in the White City          | Erik Larson | 2003             | History
                 | The Lion, the Witch and the Wardrobe | C.S. Lewis  | 1950-10-16       | Fantasy
