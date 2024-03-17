@@ -11,16 +11,16 @@ Feature: Searching Books
 
      Scenario: Search By Name
         When I search for a book having the title "In the Garden of Beasts"
-        Then I should find book with the title "In the Garden of Beasts"
+        Then I should find the book with the title "In the Garden of Beasts"
 
      Scenario: Search By Author
-        When I search for a book having th author "Erik Larson"
+        When I search for a book having the author "Erik Larson"
         Then I should find 2 books
 
      Scenario: Search By Year
-        When I search for a book from 2011
+        When I search for books published between 2000 and 2010
         Then I should find 1 book
-        Then I should find the book with the title "In the Garden of Beasts"
+        Then I should find the book with the title "The Devil in the White City"
 
      Scenario: Search By Category
         When I search for a book with the category "History"
