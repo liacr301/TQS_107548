@@ -1,0 +1,8 @@
+
+f	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£¦¤³
+h	java:S100+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Í¿ıÿÿÿÿ
+U
+java:S1854-":Remove this useless assignment to local variable "entity".(ø¢¾Øúÿÿÿÿ
+F
+java:S1481-"+Remove this unused "entity" local variable.(ø¢¾Øúÿÿÿÿ
+c	java:S1004"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ìš
