@@ -1,0 +1,14 @@
+version: 3.0
+
+services:
+  api:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    restart: on-failure
+
+  frontend:
+    build: ./bussearch_frontend
+    ports:
+      - "5173:5173"
+    restart: on-failure
