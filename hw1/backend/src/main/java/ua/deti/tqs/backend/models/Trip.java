@@ -1,0 +1,61 @@
+package ua.deti.tqs.backend.models;
+
+public class Trip {
+
+    private int id;
+    private int bus;
+    private String fromCity;
+    private String toCity;
+    private String date;
+    private String time;
+    private String price;
+    private String availableSeats;
+
+    public Trip(int id, int bus, String fromCity, String toCity, String date, String time, String price, String availableSeats) {
+        this.id = id;
+        this.bus = bus;
+        this.fromCity = fromCity;
+        this.toCity = toCity;
+        this.date = date;
+        this.time = time;
+        this.price = price;
+        this.availableSeats = availableSeats;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getBus() {
+        return bus;
+    }
+
+    public String getFromCity() {
+        return fromCity;
+    }
+
+    public String getToCity() {
+        return toCity;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public String getAvailableSeats() {
+        return availableSeats;
+    }
+
+    public void setAvailableSeats(String availableSeats) {
+        this.availableSeats = availableSeats;
+    }
+
+}
