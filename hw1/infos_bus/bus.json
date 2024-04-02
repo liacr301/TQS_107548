@@ -1,0 +1,1954 @@
+{
+    "busdemo": [
+        {
+            "from": "Aveiro",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "001",
+                    "Bus": "Bus 116",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "002",
+                    "Bus": "Bus 186",
+                    "Date": "2024-04-02",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "003",
+                    "Bus": "Bus 262",
+                    "Date": "2024-04-11",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "004",
+                    "Bus": "Bus 358",
+                    "Date": "2024-04-08",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "005",
+                    "Bus": "Bus 244",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "006",
+                    "Bus": "Bus 501",
+                    "Date": "2024-04-04",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "007",
+                    "Bus": "Bus 261",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "008",
+                    "Bus": "Bus 398",
+                    "Date": "2024-04-06",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "009",
+                    "Bus": "Bus 307",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "010",
+                    "Bus": "Bus 426",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "011",
+                    "Bus": "Bus 269",
+                    "Date": "2024-04-11",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "012",
+                    "Bus": "Bus 527",
+                    "Date": "2024-04-11",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "013",
+                    "Bus": "Bus 309",
+                    "Date": "2024-04-04",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "014",
+                    "Bus": "Bus 228",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "015",
+                    "Bus": "Bus 276",
+                    "Date": "2024-04-06",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "016",
+                    "Bus": "Bus 577",
+                    "Date": "2024-04-06",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "017",
+                    "Bus": "Bus 379",
+                    "Date": "2024-04-02",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "018",
+                    "Bus": "Bus 133",
+                    "Date": "2024-04-11",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "019",
+                    "Bus": "Bus 143",
+                    "Date": "2024-04-11",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "020",
+                    "Bus": "Bus 466",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "021",
+                    "Bus": "Bus 176",
+                    "Date": "2024-04-10",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "022",
+                    "Bus": "Bus 125",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "023",
+                    "Bus": "Bus 237",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "024",
+                    "Bus": "Bus 427",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Aveiro",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "025",
+                    "Bus": "Bus 272",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "026",
+                    "Bus": "Bus 332",
+                    "Date": "2024-04-11",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "027",
+                    "Bus": "Bus 145",
+                    "Date": "2024-04-06",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "028",
+                    "Bus": "Bus 146",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "029",
+                    "Bus": "Bus 573",
+                    "Date": "2024-04-08",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "030",
+                    "Bus": "Bus 587",
+                    "Date": "2024-04-06",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "031",
+                    "Bus": "Bus 227",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "032",
+                    "Bus": "Bus 280",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "033",
+                    "Bus": "Bus 237",
+                    "Date": "2024-04-08",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "034",
+                    "Bus": "Bus 310",
+                    "Date": "2024-04-02",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "035",
+                    "Bus": "Bus 283",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "036",
+                    "Bus": "Bus 355",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "037",
+                    "Bus": "Bus 586",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "038",
+                    "Bus": "Bus 588",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "039",
+                    "Bus": "Bus 106",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "040",
+                    "Bus": "Bus 192",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "041",
+                    "Bus": "Bus 340",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "042",
+                    "Bus": "Bus 188",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "043",
+                    "Bus": "Bus 264",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "044",
+                    "Bus": "Bus 182",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "045",
+                    "Bus": "Bus 509",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "046",
+                    "Bus": "Bus 128",
+                    "Date": "2024-04-10",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "047",
+                    "Bus": "Bus 104",
+                    "Date": "2024-04-10",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "048",
+                    "Bus": "Bus 106",
+                    "Date": "2024-04-10",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "049",
+                    "Bus": "Bus 473",
+                    "Date": "2024-04-06",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Lisboa",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "050",
+                    "Bus": "Bus 483",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "051",
+                    "Bus": "Bus 234",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "052",
+                    "Bus": "Bus 213",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "053",
+                    "Bus": "Bus 510",
+                    "Date": "2024-04-04",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "054",
+                    "Bus": "Bus 238",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "055",
+                    "Bus": "Bus 565",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "056",
+                    "Bus": "Bus 152",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "057",
+                    "Bus": "Bus 107",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "058",
+                    "Bus": "Bus 137",
+                    "Date": "2024-04-08",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "059",
+                    "Bus": "Bus 462",
+                    "Date": "2024-04-06",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "060",
+                    "Bus": "Bus 145",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "061",
+                    "Bus": "Bus 541",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "062",
+                    "Bus": "Bus 449",
+                    "Date": "2024-04-10",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "063",
+                    "Bus": "Bus 571",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "064",
+                    "Bus": "Bus 107",
+                    "Date": "2024-04-04",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "065",
+                    "Bus": "Bus 403",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "066",
+                    "Bus": "Bus 279",
+                    "Date": "2024-04-06",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "067",
+                    "Bus": "Bus 138",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "068",
+                    "Bus": "Bus 331",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "069",
+                    "Bus": "Bus 420",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "070",
+                    "Bus": "Bus 216",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "071",
+                    "Bus": "Bus 374",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "072",
+                    "Bus": "Bus 164",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "073",
+                    "Bus": "Bus 232",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "074",
+                    "Bus": "Bus 132",
+                    "Date": "2024-04-06",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Viseu",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "075",
+                    "Bus": "Bus 226",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "076",
+                    "Bus": "Bus 191",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "077",
+                    "Bus": "Bus 493",
+                    "Date": "2024-04-11",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "078",
+                    "Bus": "Bus 218",
+                    "Date": "2024-04-10",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "079",
+                    "Bus": "Bus 580",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "080",
+                    "Bus": "Bus 353",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "081",
+                    "Bus": "Bus 325",
+                    "Date": "2024-04-08",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "082",
+                    "Bus": "Bus 110",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "083",
+                    "Bus": "Bus 351",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "084",
+                    "Bus": "Bus 430",
+                    "Date": "2024-04-08",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "085",
+                    "Bus": "Bus 558",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "086",
+                    "Bus": "Bus 583",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "087",
+                    "Bus": "Bus 600",
+                    "Date": "2024-04-08",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "088",
+                    "Bus": "Bus 410",
+                    "Date": "2024-04-11",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "089",
+                    "Bus": "Bus 430",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "090",
+                    "Bus": "Bus 248",
+                    "Date": "2024-04-10",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "091",
+                    "Bus": "Bus 201",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "092",
+                    "Bus": "Bus 463",
+                    "Date": "2024-04-10",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "093",
+                    "Bus": "Bus 564",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "094",
+                    "Bus": "Bus 533",
+                    "Date": "2024-04-02",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "095",
+                    "Bus": "Bus 169",
+                    "Date": "2024-04-11",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "096",
+                    "Bus": "Bus 374",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "097",
+                    "Bus": "Bus 476",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "098",
+                    "Bus": "Bus 139",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "099",
+                    "Bus": "Bus 168",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Porto",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "100",
+                    "Bus": "Bus 244",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "101",
+                    "Bus": "Bus 452",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "102",
+                    "Bus": "Bus 356",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "103",
+                    "Bus": "Bus 341",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "104",
+                    "Bus": "Bus 308",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "105",
+                    "Bus": "Bus 511",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "106",
+                    "Bus": "Bus 197",
+                    "Date": "2024-04-11",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "107",
+                    "Bus": "Bus 379",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "108",
+                    "Bus": "Bus 346",
+                    "Date": "2024-04-08",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "109",
+                    "Bus": "Bus 163",
+                    "Date": "2024-04-06",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "110",
+                    "Bus": "Bus 424",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "111",
+                    "Bus": "Bus 577",
+                    "Date": "2024-04-04",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "112",
+                    "Bus": "Bus 531",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "113",
+                    "Bus": "Bus 160",
+                    "Date": "2024-04-02",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "114",
+                    "Bus": "Bus 583",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "115",
+                    "Bus": "Bus 102",
+                    "Date": "2024-04-04",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "116",
+                    "Bus": "Bus 425",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "117",
+                    "Bus": "Bus 297",
+                    "Date": "2024-04-04",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "118",
+                    "Bus": "Bus 443",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "119",
+                    "Bus": "Bus 202",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "120",
+                    "Bus": "Bus 337",
+                    "Date": "2024-04-11",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "121",
+                    "Bus": "Bus 382",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "122",
+                    "Bus": "Bus 487",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "123",
+                    "Bus": "Bus 211",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "124",
+                    "Bus": "Bus 170",
+                    "Date": "2024-04-04",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Braga",
+            "to": "Guarda",
+            "trips": [
+                {
+                    "ID": "125",
+                    "Bus": "Bus 316",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "126",
+                    "Bus": "Bus 517",
+                    "Date": "2024-04-04",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "127",
+                    "Bus": "Bus 159",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "128",
+                    "Bus": "Bus 195",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "129",
+                    "Bus": "Bus 202",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Aveiro",
+            "trips": [
+                {
+                    "ID": "130",
+                    "Bus": "Bus 295",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "131",
+                    "Bus": "Bus 231",
+                    "Date": "2024-04-10",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "132",
+                    "Bus": "Bus 448",
+                    "Date": "2024-04-04",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "133",
+                    "Bus": "Bus 473",
+                    "Date": "2024-04-06",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "134",
+                    "Bus": "Bus 225",
+                    "Date": "2024-04-10",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Lisboa",
+            "trips": [
+                {
+                    "ID": "135",
+                    "Bus": "Bus 174",
+                    "Date": "2024-04-08",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "136",
+                    "Bus": "Bus 453",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "137",
+                    "Bus": "Bus 259",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "138",
+                    "Bus": "Bus 179",
+                    "Date": "2024-04-08",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "139",
+                    "Bus": "Bus 134",
+                    "Date": "2024-04-12",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Viseu",
+            "trips": [
+                {
+                    "ID": "140",
+                    "Bus": "Bus 453",
+                    "Date": "2024-04-07",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "141",
+                    "Bus": "Bus 282",
+                    "Date": "2024-04-10",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "142",
+                    "Bus": "Bus 481",
+                    "Date": "2024-04-05",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "143",
+                    "Bus": "Bus 458",
+                    "Date": "2024-04-10",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "144",
+                    "Bus": "Bus 352",
+                    "Date": "2024-04-08",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Porto",
+            "trips": [
+                {
+                    "ID": "145",
+                    "Bus": "Bus 174",
+                    "Date": "2024-04-11",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "146",
+                    "Bus": "Bus 485",
+                    "Date": "2024-04-03",
+                    "Dia de Hour": "9:00",
+                    "Pre\u00e7o": "25\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "147",
+                    "Bus": "Bus 498",
+                    "Date": "2024-04-11",
+                    "Dia de Hour": "10:00",
+                    "Pre\u00e7o": "30\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "148",
+                    "Bus": "Bus 430",
+                    "Date": "2024-04-09",
+                    "Dia de Hour": "11:00",
+                    "Pre\u00e7o": "35\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "149",
+                    "Bus": "Bus 242",
+                    "Date": "2024-04-10",
+                    "Dia de Hour": "12:00",
+                    "Pre\u00e7o": "40\u20ac"
+                }
+            ]
+        },
+        {
+            "from": "Guarda",
+            "to": "Braga",
+            "trips": [
+                {
+                    "ID": "150",
+                    "Bus": "Bus 590",
+                    "Date": "2024-04-06",
+                    "Dia de Hour": "13:00",
+                    "Pre\u00e7o": "45\u20ac"
+                }
+            ]
+        }
+    ]
+}
