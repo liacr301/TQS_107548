@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 public class Trip {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int bus;
     private String fromCity;
@@ -20,8 +20,10 @@ public class Trip {
     private String price;
     private String availableSeats;
 
-    public Trip(int id, int bus, String fromCity, String toCity, String date, String time, String price, String availableSeats) {
-        this.id = id;
+    public Trip() {
+    }
+
+    public Trip(int bus, String fromCity, String toCity, String date, String time, String price, String availableSeats) {
         this.bus = bus;
         this.fromCity = fromCity;
         this.toCity = toCity;
