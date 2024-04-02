@@ -63,6 +63,34 @@ public class Trip {
         return availableSeats;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setBus(int bus) {
+        this.bus = bus;
+    }
+
+    public void setFromCity(String fromCity) {
+        this.fromCity = fromCity;
+    }
+
+    public void setToCity(String toCity) {
+        this.toCity = toCity;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
     public void setAvailableSeats(String availableSeats) {
         this.availableSeats = availableSeats;
     }
