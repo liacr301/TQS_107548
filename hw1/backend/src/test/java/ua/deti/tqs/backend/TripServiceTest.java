@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.mockito.internal.verification.VerificationModeFactory;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -40,7 +39,7 @@ public class TripServiceTest {
         Trip trip2 = new Trip(500, "Porto", "Lisboa", "2021-05-08", "12:00", "30.0", "30");
         Trip trip3 = new Trip(600, "Viseu", "Coimbra", "2021-03-10", "15:00", "20.0", "25");
         Trip trip4 = new Trip(700, "Aveiro", "Lisboa", "2021-03-08", "15:00", "20.0", "30");
-
+        trip4.setId(128);
         List<Trip> trips_Aveiro_Lisboa = new ArrayList<>(Arrays.asList(trip1, trip4));
         List<Trip> trips_Porto_Lisboa = new ArrayList<>(Arrays.asList(trip2));
         List<Trip> trips_Viseu_Coimbra = new ArrayList<>(Arrays.asList(trip3));
@@ -64,6 +63,31 @@ public class TripServiceTest {
         assertThat(found.getPrice()).isEqualTo("20.0");
     }
 
+    @Test
+    void whenSearchInvalidId_thenTripShouldNotBeFound() {
+        int id = 9;
+        Trip found = tripService.findTripById(id);
+        assertThat(found).isNull();
+    }
 
+    @Test 
+    void whenSearchForValidTrips_thenTripsShouldBeFound() {
+        List<Trip> foundTrips = tripService.findTripByFromCityToCityAndDate("Aveiro", "Lisboa", "2021-03-08");
+        assertThat(foundTrips).isNotEmpty();
+        for (Trip t : foundTrips) {
+            assertThat(t.getId()).isIn(123, 128);
+            assertThat(t.getFromCity()).isEqualTo("Aveiro");
+            assertThat(t.getToCity()).isEqualTo("Lisboa");
+            assertThat(t.getDate()).isEqualTo("2021-03-08");
+        }
+    }
+
+    @Test
+    void whenSearchForInvalidTrips_thenTripsShouldNotBeFound() {
+        List<Trip> foundTrips = tripService.findTripByFromCityToCityAndDate("Porto", "Lisboa", "2021-05-08");
+        assertThat(foundTrips).isEmpty();
+    }
+
+    
 
 }
