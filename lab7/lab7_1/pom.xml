@@ -31,8 +31,8 @@
         </dependency>
         <dependency>
             <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>${rest-assured.version}</version>
+            <artifactId>spring-mock-mvc</artifactId>
+            <version>5.1.1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

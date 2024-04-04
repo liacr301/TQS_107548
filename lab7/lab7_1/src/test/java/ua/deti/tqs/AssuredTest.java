@@ -5,8 +5,9 @@ import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.junit.jupiter.api.Test;
 
-public class Test {
+public class AssuredTest {
 
     @Test
     public void getAllToDos(){
@@ -16,13 +17,15 @@ public class Test {
     @Test
     public void Query4Response(){
         get("https://jsonplaceholder.typicode.com/todos/4").then().assertThat()
-                .body(".title", equalTo("et porro tempora"));
+                .body("title", equalTo("et porro tempora"));
     }
 
     @Test
     public void givenUrl_whenJsonResponseHasArrayWithGivenValuesUnderKey_thenCorrect() {
-        get("https://jsonplaceholder.typicode.com/todos").then().assertThat()
-                .body(".id", hasItems("198", "199"));
+        get("https://jsonplaceholder.typicode.com/todos")
+                .then()
+                .assertThat()
+                .body("id", hasItems(198, 199));
     }
 
     @Test
