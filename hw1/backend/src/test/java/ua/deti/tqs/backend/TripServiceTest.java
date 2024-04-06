@@ -72,7 +72,7 @@ public class TripServiceTest {
 
     @Test 
     void whenSearchForValidTrips_thenTripsShouldBeFound() {
-        List<Trip> foundTrips = tripService.findTripByFromCityToCityAndDate("Aveiro", "Lisboa", "2021-03-08");
+        List<Trip> foundTrips = tripService.findTripByFromCityToCityAndDateTrip("Aveiro", "Lisboa", "2021-03-08");
         assertThat(foundTrips).isNotEmpty();
         for (Trip t : foundTrips) {
             assertThat(t.getId()).isIn(123, 128);
@@ -84,7 +84,7 @@ public class TripServiceTest {
 
     @Test
     void whenSearchForInvalidTrips_thenTripsShouldNotBeFound() {
-        List<Trip> foundTrips = tripService.findTripByFromCityToCityAndDate("Porto", "Lisboa", "2021-04-08");
+        List<Trip> foundTrips = tripService.findTripByFromCityToCityAndDateTrip("Porto", "Lisboa", "2021-04-08");
         assertThat(foundTrips).isEmpty();
     }
     

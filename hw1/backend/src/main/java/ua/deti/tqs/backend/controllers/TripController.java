@@ -41,7 +41,7 @@ public class TripController {
 
     @GetMapping("/all_for_search")
     public ResponseEntity<List<Trip>> searchTrips(@RequestParam String fromCity, @RequestParam String toCity, @RequestParam String date) {
-        return ResponseEntity.ok().body(tripService.findTripByFromCityToCityAndDate(fromCity, toCity, date));
+        return ResponseEntity.ok().body(tripService.findTripByFromCityToCityAndDateTrip(fromCity, toCity, date));
     }    
     
 

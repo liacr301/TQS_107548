@@ -19,7 +19,7 @@ public class TripService {
         return tripRepository.findById(id);
     }
 
-    public List<Trip> findTripByFromCityToCityAndDate(String fromCity, String toCity, String dateTrip) {
+    public List<Trip> findTripByFromCityToCityAndDateTrip(String fromCity, String toCity, String dateTrip) {
         return tripRepository.findByFromCityAndToCityAndDateTrip(fromCity, toCity, dateTrip);
     }
     
