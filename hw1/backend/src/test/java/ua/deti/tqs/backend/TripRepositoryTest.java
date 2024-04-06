@@ -3,6 +3,7 @@ package ua.deti.tqs.backend;
 import ua.deti.tqs.backend.models.Trip;
 import ua.deti.tqs.backend.dao.TripRepository;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,16 +24,21 @@ public class TripRepositoryTest {
     @Autowired
     private TripRepository tripRepository;
 
+    @BeforeEach
+    public void resetDatabase() {
+        entityManager.clear();
+    }
+
     @Test
     @DisplayName("Test TripRepository Return Trip By Id")
-    public void testTripRepositoryReturnCarById() {
-        Trip trip = new Trip(1, "Aveiro", "Porto", "2021-03-01", "10:00", "10.0", "50");
-        trip.setId(456);
+    public void testTripRepositoryReturnTripById() {
+     Trip trip = new Trip(120, "Aveiro", "Porto", "2021-03-01", "10:00", 10.0, 50);
         entityManager.persistAndFlush(trip);
 
         Trip found = tripRepository.findById(trip.getId());
         assertThat(found.getId()).isEqualTo(trip.getId());
     }
+
 
     @Test
     @DisplayName("Test TripRepository Return Invalid Trip By Id")
@@ -44,15 +50,12 @@ public class TripRepositoryTest {
     @Test
     @DisplayName("Test TripRepository Return Trip By FromCity, ToCity and Date")
     public void testTripRepositoryReturnTripByFromCityToCityAndDate() {
-        Trip trip1 = new Trip(409, "Aveiro", "Lisboa", "2021-03-08", "10:00", "20.0", "50");
-        trip1.setId(123);
+        Trip trip1 = new Trip(409, "Aveiro", "Lisboa", "2021-03-08", "10:00", 20.0, 50);
+        Trip trip2 = new Trip(500, "Aveiro", "Lisboa", "2021-03-08", "12:00", 20.0, 30);
         entityManager.persistAndFlush(trip1);
-        Trip trip2 = new Trip(500, "Aveiro", "Lisboa", "2021-03-08", "12:00", "20.0", "30");
-        trip2.setId(124);
         entityManager.persistAndFlush(trip2);
-
         List<Trip> foundTrips = new ArrayList<Trip>();
-        foundTrips = tripRepository.findByFromCityAndToCityAndDate("Aveiro", "Lisboa", "2021-03-08");
+        foundTrips = tripRepository.findByFromCityAndToCityAndDateTrip("Aveiro", "Lisboa", "2021-03-08");
 
 
         assertThat(foundTrips).isNotEmpty();
@@ -64,8 +67,9 @@ public class TripRepositoryTest {
     @DisplayName("Test TripRepository Return Invalid Trip By FromCity, ToCity and Date")
     public void testTripRepositoryReturnInvalidTripByFromCityToCityAndDate() {
         List<Trip> foundTrips = new ArrayList<Trip>();
-        foundTrips = tripRepository.findByFromCityAndToCityAndDate("Aveiro", "Viseu", "2021-03-08");
+        foundTrips = tripRepository.findByFromCityAndToCityAndDateTrip("Aveiro", "Viseu", "2021-03-08");
 
         assertThat(foundTrips).isEmpty();
     }
+
 }

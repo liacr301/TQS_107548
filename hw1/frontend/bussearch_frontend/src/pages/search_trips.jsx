@@ -8,6 +8,15 @@ function SearchTrips() {
                 <a className="btn btn-ghost text-xl" href='./reservations'>See your reservations</a>
             </div>
             <div className="m-8">
+                <div className="w-full mb-4">
+                <select className="select w-1/2 max-w-xs bg-green-100">
+                        <option>EUR</option>
+                        <option>USD</option>
+                        <option>GBP</option>
+                        <option>AUD</option>
+                        <option>CAD</option>
+                    </select>
+                </div>
                 <div className="overflow-x-auto">
                     <table className="table">
                         <thead>

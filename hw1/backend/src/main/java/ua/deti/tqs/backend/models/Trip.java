@@ -4,9 +4,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 
 @Entity
+@Table(name = "TBL_TRIPS")
 public class Trip {
 
     @Id
@@ -15,20 +17,20 @@ public class Trip {
     private int bus;
     private String fromCity;
     private String toCity;
-    private String date;
-    private String time;
-    private String price;
-    private String availableSeats;
+    private String dateTrip;
+    private String timeTrip;
+    private double price;
+    private int availableSeats;
 
     public Trip() {
     }
 
-    public Trip(int bus, String fromCity, String toCity, String date, String time, String price, String availableSeats) {
+    public Trip(int bus, String fromCity, String toCity, String dateTrip, String timeTrip, double price, int availableSeats) {
         this.bus = bus;
         this.fromCity = fromCity;
         this.toCity = toCity;
-        this.date = date;
-        this.time = time;
+        this.dateTrip = dateTrip;
+        this.timeTrip = timeTrip;
         this.price = price;
         this.availableSeats = availableSeats;
     }
@@ -49,19 +51,19 @@ public class Trip {
         return toCity;
     }
 
-    public String getDate() {
-        return date;
+    public String getDateTrip() {
+        return dateTrip;
     }
 
-    public String getTime() {
-        return time;
+    public String getTimeTrip() {
+        return timeTrip;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public String getAvailableSeats() {
+    public int getAvailableSeats() {
         return availableSeats;
     }
 
@@ -81,19 +83,19 @@ public class Trip {
         this.toCity = toCity;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDateTrip(String dateTrip) {
+        this.dateTrip = dateTrip;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setTimeTrip(String timeTrip) {
+        this.timeTrip = timeTrip;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public void setAvailableSeats(String availableSeats) {
+    public void setAvailableSeats(int availableSeats) {
         this.availableSeats = availableSeats;
     }
 

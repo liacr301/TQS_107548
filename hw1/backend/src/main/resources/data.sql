@@ -1,4 +1,4 @@
-INSERT INTO TBL_TRIPS (bus, fromCity, toCity, date, time, price, availableSeats) VALUES 
+INSERT INTO TBL_TRIPS (bus, fromCity, toCity, date_trip, time_trip, price, availableSeats) VALUES 
 (327, 'Aveiro', 'Lisboa', '2024-04-08', '9:00:00', 25.0, 29),
 (334, 'Aveiro', 'Lisboa', '2024-04-08', '10:00:00', 30.0, 30),
 (361, 'Aveiro', 'Lisboa', '2024-04-06', '11:00:00', 35.0, 20),
