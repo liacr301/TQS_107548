@@ -1,4 +1,4 @@
-package ua.deti.tqs.backend;
+package ua.deti.tqs.backend.services;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package ua.deti.tqs.backend;
+package ua.deti.tqs.backend.services;
 
 public class ExchangedServiceTest {
     

@@ -1,4 +1,4 @@
-package ua.deti.tqs.backend;
+package ua.deti.tqs.backend.dao;
 
 import ua.deti.tqs.backend.models.Trip;
 import ua.deti.tqs.backend.dao.TripRepository;
