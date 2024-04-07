@@ -36,12 +36,12 @@ public class TripController {
     }
 
     @GetMapping("/all_for_search")
-    public ResponseEntity<List<Trip>> searchTrips(@RequestParam String fromCity, @RequestParam String toCity, @RequestParam String date) {
-        if (fromCity == null || toCity == null || date == null) {
+    public ResponseEntity<List<Trip>> searchTrips(@RequestParam String fromCity, @RequestParam String toCity, @RequestParam String dateTrip) {
+        if (fromCity == null || toCity == null || dateTrip == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
 
-        if (fromCity.isEmpty() || toCity.isEmpty() || date.isEmpty()) {
+        if (fromCity.isEmpty() || toCity.isEmpty() || dateTrip.isEmpty()) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
 
@@ -49,7 +49,7 @@ public class TripController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
 
-        return ResponseEntity.ok().body(tripService.findTripByFromCityToCityAndDateTrip(fromCity, toCity, date));
+        return ResponseEntity.ok().body(tripService.findTripByFromCityToCityAndDateTrip(fromCity, toCity, dateTrip));
     }    
     
 

@@ -39,7 +39,7 @@ function App() {
           }
         />
         <Route
-          path="/user_details"
+          path="/user_details/:tripId"
           element={
               <UserDetails />
           }

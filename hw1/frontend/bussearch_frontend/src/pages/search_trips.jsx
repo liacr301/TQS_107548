@@ -1,6 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function SearchTrips() {
+
+    const { state } = useLocation();
+    const [trips, setTrips] = useState([]); 
+    const navigate = useNavigate();
+
+    const handleClick = (tripId) => {
+        navigate('/user-details', { state: { tripId } });
+    };
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await fetch(
+                `http://localhost:8001/api/trips/search_for_all?fromCity=${state.fromCity}&toCity=${state.toCity}&dateTrip=${state.dateTrip}`,
+                { method: "GET" }
+            );
+            const data = await response.json();
+            setTrips(data);
+        };
+
+        if (state) {
+            fetchData().catch(console.error);
+        }
+    }, [state]);
+
     return (
         <div className="web_page">
             <div className="navbar bg-green-100 flex justify-between">
@@ -30,15 +57,17 @@ function SearchTrips() {
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>567</td>
-                            <td>Cy Ganderton</td>
-                            <td>Quality Control Specialist</td>
-                            <td>2017-09-01</td>
-                            <td>09:30H</td>
-                            <td>1.08€</td>
-                            <td><button className="btn btn-primary m-4">Reserve</button></td>
-                        </tr>
+                        {trips.map((trip) => (
+                            <tr key={trip.id}>
+                                <td>{trip.bus}</td>
+                                <td>{trip.fromCity}</td>
+                                <td>{trip.toCity}</td>
+                                <td>{trip.date}</td>
+                                <td>{trip.time}</td>
+                                <td>{trip.price}</td>
+                                <td><button onClick={() => handleClick(trip.id)} className="btn btn-primary m-4">Reserve</button></td>
+                            </tr>
+                            ))}
                         </tbody>
                     </table>
                 </div>

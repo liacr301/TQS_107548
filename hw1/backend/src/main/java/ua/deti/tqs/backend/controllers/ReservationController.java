@@ -22,7 +22,6 @@ import ua.deti.tqs.backend.services.TripService;
 import ua.deti.tqs.backend.models.Reservation;
 import ua.deti.tqs.backend.models.Trip;
 
-
 @CrossOrigin
 @RestController
 @RequestMapping("/api/reservations")
