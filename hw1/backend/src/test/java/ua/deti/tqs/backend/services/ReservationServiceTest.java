@@ -35,7 +35,7 @@ public class ReservationServiceTest {
 
     @Test
     public void testSaveReservation() {
-        Reservation reservation = new Reservation(1, "token123", "Aveiro", "Porto", "2021-03-01", "10:00", "John", "Doe", "john.doe@example.com");
+        Reservation reservation = new Reservation("token123", "Aveiro", "Porto", "2021-03-01", "10:00", "John", "Doe", "john.doe@example.com");
         when(reservationRepository.save(reservation)).thenReturn(reservation);
 
         Reservation savedReservation = reservationService.saveReservation(reservation);
@@ -44,7 +44,7 @@ public class ReservationServiceTest {
         assertEquals("Aveiro", savedReservation.getFromCity());
         assertEquals("Porto", savedReservation.getToCity());
         assertEquals("2021-03-01", savedReservation.getDateTrip());
-        assertEquals("10:00", savedReservation.getTime());
+        assertEquals("10:00", savedReservation.getTimeTrip());
         assertEquals("John", savedReservation.getFirstName());
         assertEquals("Doe", savedReservation.getLastName());
         assertEquals("john.doe@example.com", savedReservation.getEmail());
@@ -54,7 +54,7 @@ public class ReservationServiceTest {
     @Test
     public void testFindReservationById() {
         String token = "token123";
-        Reservation reservation = new Reservation(1, token, "Aveiro", "Porto", "2021-03-01", "10:00", "John", "Doe", "john.doe@example.com");
+        Reservation reservation = new Reservation(token, "Aveiro", "Porto", "2021-03-01", "10:00", "John", "Doe", "john.doe@example.com");
         when(reservationRepository.findByToken(token)).thenReturn(reservation);
 
         Reservation foundReservation = reservationService.findReservationById(token);
@@ -63,7 +63,7 @@ public class ReservationServiceTest {
         assertEquals("Aveiro", foundReservation.getFromCity());
         assertEquals("Porto", foundReservation.getToCity());
         assertEquals("2021-03-01", foundReservation.getDateTrip());
-        assertEquals("10:00", foundReservation.getTime());
+        assertEquals("10:00", foundReservation.getTimeTrip());
         assertEquals("John", foundReservation.getFirstName());
         assertEquals("Doe", foundReservation.getLastName());
         assertEquals("john.doe@example.com", foundReservation.getEmail());

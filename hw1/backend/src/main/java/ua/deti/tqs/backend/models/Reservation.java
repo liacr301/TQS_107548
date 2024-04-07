@@ -21,8 +21,7 @@ public class Reservation {
     private String lastName;
     private String email;
 
-    public Reservation(int id, String token, String fromCity, String toCity, String dateTrip, String timeTrip, String firstName, String lastName, String email) {
-        this.id = id;
+    public Reservation(String token, String fromCity, String toCity, String dateTrip, String timeTrip, String firstName, String lastName, String email) {
         this.token = token;
         this.fromCity = fromCity;
         this.toCity = toCity;
@@ -53,7 +52,7 @@ public class Reservation {
         return dateTrip;
     }
 
-    public String getTime() {
+    public String getTimeTrip() {
         return timeTrip;
     }
 

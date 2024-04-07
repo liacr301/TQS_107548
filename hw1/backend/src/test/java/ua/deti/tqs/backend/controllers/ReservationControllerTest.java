@@ -9,12 +9,15 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import jakarta.persistence.EntityNotFoundException;
 import ua.deti.tqs.backend.models.Reservation;
+import ua.deti.tqs.backend.models.Trip;
 import ua.deti.tqs.backend.services.ReservationService;
 import ua.deti.tqs.backend.services.TripService;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -30,60 +33,62 @@ public class ReservationControllerTest {
     @MockBean
     private ReservationService reservationService;
 
+    @MockBean
+    private TripService tripService;
+
+    private Trip mockTrip;
+    private Reservation mockReservation;
+
     @BeforeEach
-    public void setUp() throws Exception {
+    public void setUp() {
+        mockTrip = new Trip(1, "Aveiro", "Porto", "2021-03-01", "10:00", 10.0, 50);
+        mockReservation = new Reservation("token123", "Aveiro", "Porto", "2021-03-01", "10:00", "John", "Doe", "john@example.com");
+        mockReservation.setId(1);
     }
 
     @Test
-    public void whenGetReservationByToken_thenReturnReservationJson() throws Exception {
-        String token = "testToken123";
-        Reservation reservation = new Reservation(1, token, "Aveiro", "Porto", "2021-03-01", "10:00", "John", "Doe", "john.doe@example.com");
+    public void whenSaveReservationWithValidInput_thenCreateReservation() throws Exception {
+        when(tripService.findTripById(1)).thenReturn(mockTrip);
+        when(reservationService.saveReservation(any(Reservation.class))).thenReturn(mockReservation);
 
-        when(reservationService.findReservationById(token)).thenReturn(reservation);
-
-        mvc.perform(get("/api/reservations/{Token}", token)
+        mvc.perform(post("/api/reservations/save")
+                .param("tripId", "1")
+                .param("firstName", "John")
+                .param("lastName", "Doe")
+                .param("email", "john@example.com")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.token", is(reservation.getToken())))
-                .andExpect(jsonPath("$.fromCity", is(reservation.getFromCity())))
-                .andExpect(jsonPath("$.toCity", is(reservation.getToCity())))
-                .andExpect(jsonPath("$.dateTrip", is(reservation.getDateTrip())))
-                .andExpect(jsonPath("$.time", is(reservation.getTime())))
-                .andExpect(jsonPath("$.firstName", is(reservation.getFirstName())))
-                .andExpect(jsonPath("$.lastName", is(reservation.getLastName())))
-                .andExpect(jsonPath("$.email", is(reservation.getEmail())));
+                .andExpect(jsonPath("$.token", is(mockReservation.getToken())))
+                .andExpect(jsonPath("$.fromCity", is(mockReservation.getFromCity())))
+                .andExpect(jsonPath("$.toCity", is(mockReservation.getToCity())))
+                .andExpect(jsonPath("$.dateTrip", is(mockReservation.getDateTrip())))
+                .andExpect(jsonPath("$.timeTrip", is(mockReservation.getTimeTrip())))
+                .andExpect(jsonPath("$.firstName", is(mockReservation.getFirstName())))
+                .andExpect(jsonPath("$.lastName", is(mockReservation.getLastName())))
+                .andExpect(jsonPath("$.email", is(mockReservation.getEmail())));
     }
 
     @Test
-    public void whenSaveReservation_thenReturnSavedReservationJson() throws Exception {
-        Reservation reservation = new Reservation(1, "token123", "Aveiro", "Porto", "2021-03-01", "10:00", "John", "Doe", "john.doe@example.com");
-
-        when(reservationService.saveReservation(any(Reservation.class))).thenReturn(reservation);
+    public void whenSaveReservationWithInvalidTripId_thenHandleGracefully() throws Exception {
+        when(tripService.findTripById(anyInt())).thenThrow(new EntityNotFoundException("Trip not found"));
 
         mvc.perform(post("/api/reservations/save")
-                .param("fromCity", reservation.getFromCity())
-                .param("toCity", reservation.getToCity())
-                .param("date", reservation.getDateTrip())
-                .param("time", reservation.getTime())
-                .param("firstName", reservation.getFirstName())
-                .param("lastName", reservation.getLastName())
-                .param("email", reservation.getEmail())
-                .contentType(MediaType.APPLICATION_FORM_URLENCODED))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.token", is(reservation.getToken())))
-                .andExpect(jsonPath("$.fromCity", is(reservation.getFromCity())))
-                .andExpect(jsonPath("$.toCity", is(reservation.getToCity())))
-                .andExpect(jsonPath("$.dateTrip", is(reservation.getDateTrip())))
-                .andExpect(jsonPath("$.time", is(reservation.getTime())))
-                .andExpect(jsonPath("$.firstName", is(reservation.getFirstName())))
-                .andExpect(jsonPath("$.lastName", is(reservation.getLastName())))
-                .andExpect(jsonPath("$.email", is(reservation.getEmail())));
+                .param("tripId", "999")
+                .param("firstName", "John")
+                .param("lastName", "Doe")
+                .param("email", "john@example.com")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNotFound());
     }
 
     @Test
-    public void whenSaveReservationWithMissingParams_thenBadRequest() throws Exception {
+    public void whenSaveReservationWithMissingParameters_thenBadRequest() throws Exception {
         mvc.perform(post("/api/reservations/save")
-                .contentType(MediaType.APPLICATION_FORM_URLENCODED))
+                .param("tripId", "1")
+                .param("firstName", "")
+                .param("lastName", "Doe")
+                .param("email", "john@example.com")
+                .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isBadRequest());
     }
 }

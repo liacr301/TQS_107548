@@ -29,7 +29,7 @@ public class ReservationRepositoryTest {
     @Test
     @DisplayName("Test find reservation by token")
     public void testFindReservationByToken() {
-        Reservation reservation = new Reservation(0, "Token", "fromCity", "toCity", "date", "time", "firstName", "lastName", "email");
+        Reservation reservation = new Reservation("Token", "fromCity", "toCity", "date", "time", "firstName", "lastName", "email");
         entityManager.persistAndFlush(reservation);
         Reservation found = reservationRepository.findByToken("Token");
         assertThat(found.getToken()).isEqualTo(reservation.getToken());
