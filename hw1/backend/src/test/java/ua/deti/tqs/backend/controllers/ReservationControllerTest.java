@@ -47,6 +47,26 @@ public class ReservationControllerTest {
     }
 
     @Test
+    public void whenGetReservationByToken_thenReturnReservationJson() throws Exception {
+        String token = "testToken123";
+        Reservation reservation = new Reservation(token, "Aveiro", "Porto", "2021-03-01", "10:00", "John", "Doe", "john.doe@example.com");
+
+        when(reservationService.findReservationById(token)).thenReturn(reservation);
+
+        mvc.perform(get("/api/reservations/{Token}", token)
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.token", is(reservation.getToken())))
+                .andExpect(jsonPath("$.fromCity", is(reservation.getFromCity())))
+                .andExpect(jsonPath("$.toCity", is(reservation.getToCity())))
+                .andExpect(jsonPath("$.dateTrip", is(reservation.getDateTrip())))
+                .andExpect(jsonPath("$.timeTrip", is(reservation.getTimeTrip())))
+                .andExpect(jsonPath("$.firstName", is(reservation.getFirstName())))
+                .andExpect(jsonPath("$.lastName", is(reservation.getLastName())))
+                .andExpect(jsonPath("$.email", is(reservation.getEmail())));
+    }
+
+    @Test
     public void whenSaveReservationWithValidInput_thenCreateReservation() throws Exception {
         when(tripService.findTripById(1)).thenReturn(mockTrip);
         when(reservationService.saveReservation(any(Reservation.class))).thenReturn(mockReservation);
