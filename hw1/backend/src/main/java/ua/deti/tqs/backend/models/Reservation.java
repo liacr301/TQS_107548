@@ -1,33 +1,44 @@
 package ua.deti.tqs.backend.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "TBL_RESERVATIONS")
 public class Reservation {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String token;
     private String fromCity;
     private String toCity;
-    private String date;
-    private String time;
+    private String dateTrip;
+    private String timeTrip;
     private String firstName;
     private String lastName;
     private String email;
 
-    public Reservation(String id, String fromCity, String toCity, String date, String time, String firstName, String lastName, String email) {
+    public Reservation(int id, String token, String fromCity, String toCity, String dateTrip, String timeTrip, String firstName, String lastName, String email) {
         this.id = id;
+        this.token = token;
         this.fromCity = fromCity;
         this.toCity = toCity;
-        this.date = date;
-        this.time = time;
+        this.dateTrip = dateTrip;
+        this.timeTrip = timeTrip;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
+    }
+
+    public String getToken() {
+        return token;
     }
 
     public String getFromCity() {
@@ -38,12 +49,12 @@ public class Reservation {
         return toCity;
     }
 
-    public String getDate() {
-        return date;
+    public String getDateTrip() {
+        return dateTrip;
     }
 
     public String getTime() {
-        return time;
+        return timeTrip;
     }
 
     public String getFirstName() {
@@ -58,8 +69,12 @@ public class Reservation {
         return email;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 
     public void setFromCity(String fromCity) {
@@ -70,12 +85,12 @@ public class Reservation {
         this.toCity = toCity;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDateTrip(String dateTrip) {
+        this.dateTrip = dateTrip;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setTimeTrip(String timeTrip) {
+        this.timeTrip = timeTrip;
     }
 
     public void setFirstName(String firstName) {

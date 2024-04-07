@@ -20,7 +20,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import ua.deti.tqs.backend.models.Trip;
 import ua.deti.tqs.backend.dao.TripRepository;
-import ua.deti.tqs.backend.services.TripService;
 
 @ExtendWith(MockitoExtension.class)
 public class TripServiceTest {

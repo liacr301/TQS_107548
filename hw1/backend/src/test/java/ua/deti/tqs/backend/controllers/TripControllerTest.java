@@ -100,4 +100,63 @@ public class TripControllerTest {
                 .andExpect(jsonPath("$", hasSize(0)));
         verify(tripService, times(1)).findTripByFromCityToCityAndDateTrip(anyString(), anyString(), anyString());
     }
-}
+
+    @Test
+    public void whenSearchTripsWithNullParameters_thenBadRequest() throws Exception {
+        mvc.perform(get("/api/trips/all_for_search")
+                .param("fromCity", (String) null)
+                .param("toCity", "Porto")
+                .param("date", "2021-03-01")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest());
+
+        mvc.perform(get("/api/trips/all_for_search")
+                .param("fromCity", "Aveiro")
+                .param("toCity", (String) null)
+                .param("date", "2021-03-01")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest());
+
+        mvc.perform(get("/api/trips/all_for_search")
+                .param("fromCity", "Aveiro")
+                .param("toCity", "Porto")
+                .param("date", (String) null)
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest());
+    }
+
+    @Test
+    public void whenSearchTripsWithEmptyParameters_thenBadRequest() throws Exception {
+        mvc.perform(get("/api/trips/all_for_search")
+                .param("fromCity", "")
+                .param("toCity", "Porto")
+                .param("date", "2021-03-01")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest());
+
+        mvc.perform(get("/api/trips/all_for_search")
+                .param("fromCity", "Aveiro")
+                .param("toCity", "")
+                .param("date", "2021-03-01")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest());
+
+        mvc.perform(get("/api/trips/all_for_search")
+                .param("fromCity", "Aveiro")
+                .param("toCity", "Porto")
+                .param("date", "")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest());
+    }
+
+    @Test
+    public void whenSearchTripsWithSameFromAndToCity_thenBadRequest() throws Exception {
+        mvc.perform(get("/api/trips/all_for_search")
+                .param("fromCity", "Aveiro")
+                .param("toCity", "Aveiro")
+                .param("date", "2021-03-01")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest());
+    }
+
+    }
