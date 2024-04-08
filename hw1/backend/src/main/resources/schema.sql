@@ -19,7 +19,8 @@ CREATE TABLE TBL_RESERVATIONS (
   to_city VARCHAR(32) NOT NULL,
   date_trip VARCHAR(32) NOT NULL,
   time_trip VARCHAR(32) NOT NULL,
-  firstName VARCHAR(32) NOT NULL,
-  lastName VARCHAR(32) NOT NULL,
+  first_name VARCHAR(32) NOT NULL,
+  last_name VARCHAR(32) NOT NULL,
   email VARCHAR(64) NOT NULL
 );
+

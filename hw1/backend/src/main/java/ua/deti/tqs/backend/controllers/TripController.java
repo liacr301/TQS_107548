@@ -29,7 +29,6 @@ public class TripController {
     @Autowired
     private TripService tripService;
 
-
     @GetMapping("/{id}")
     ResponseEntity<Trip> getTripById(@PathVariable(value = "id") int id){
         return ResponseEntity.ok().body(tripService.findTripById(id));
@@ -51,10 +50,5 @@ public class TripController {
 
         return ResponseEntity.ok().body(tripService.findTripByFromCityToCityAndDateTrip(fromCity, toCity, dateTrip));
     }    
-    
-    @GetMapping("/all")
-    public ResponseEntity<List<Trip>> getAllTrips() {
-        return ResponseEntity.ok().body(tripService.showAllTrips());
-    }
 
 }

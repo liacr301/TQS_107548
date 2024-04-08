@@ -55,18 +55,21 @@ public class ReservationController {
         Trip dataParts;
         try {
             dataParts = tripService.findTripById(tripId);
+            if (dataParts.getAvailableSeats() <= 0) {
+                return ResponseEntity.status(HttpStatus.CONFLICT).body(Map.of("error", "No available seats"));
+            }
+            dataParts.setAvailableSeats(dataParts.getAvailableSeats() - 1);
+            tripService.saveTrip(dataParts);
         } catch (EntityNotFoundException e) {
             logger.error("Trip not found for id: {}", tripId, e);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
         
-        String fromCity = dataParts.getFromCity();
-        String toCity = dataParts.getToCity();
-        String date = dataParts.getDateTrip();
-        String time = dataParts.getTimeTrip();
-        Reservation reservation = new Reservation(token, fromCity, toCity, date, time, firstName, lastName, email);
+        Reservation reservation = new Reservation(token, dataParts.getFromCity(), dataParts.getToCity(), dataParts.getDateTrip(), dataParts.getTimeTrip(), firstName, lastName, email);
         Reservation savedReservation = reservationService.saveReservation(reservation);
         
+        
+
         Map<String, Object> response = new HashMap<>();
         response.put("reservation", savedReservation);
         response.put("token", token);

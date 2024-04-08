@@ -4,9 +4,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function SearchTrips() {
-
     const { state } = useLocation();
     const [trips, setTrips] = useState([]); 
+    const [currency, setCurrency] = useState('EUR');
     const navigate = useNavigate();
 
     const handleClick = (tripId) => {
@@ -14,20 +14,33 @@ function SearchTrips() {
     };
 
     useEffect(() => {
-        console.log(state);
-        const fetchData = async () => {
-            const response = await fetch(
-                `http://localhost:8002/api/trips/all_for_search?fromCity=${state.fromCity}&toCity=${state.toCity}&dateTrip=${state.dateTrip}`,
-                { method: "GET" }
-            );
-            const data = await response.json();
-            setTrips(data);
-        };
+        fetchTrips();
+    }, [state, currency]);
 
-        if (state) {
-            fetchData().catch(console.error);
+    const fetchTrips = async () => {
+        if (!state) return;
+        const response = await fetch(
+            `http://localhost:8002/api/trips/all_for_search?fromCity=${state.fromCity}&toCity=${state.toCity}&dateTrip=${state.dateTrip}`,
+            { method: "GET" }
+        );
+        const data = await response.json();
+        const tripsWithConvertedPrices = await Promise.all(data.map(async (trip) => {
+            const convertedPrice = await fetchConvertedPrice(trip.price);
+            return { ...trip, price: convertedPrice };
+        }));
+        setTrips(tripsWithConvertedPrices);
+    };
+
+    const fetchConvertedPrice = async (price) => {
+        const response = await fetch(`http://localhost:8002/api/exchange/?amount=${price}&currency=${currency}`);
+        if (response.ok) {
+            const convertedPrice = await response.json();
+            return convertedPrice;
+        } else {
+            console.error('Falha ao obter o preço convertido');
+            return price;
         }
-    }, [state]);
+    };
 
     return (
         <div className="web_page">
@@ -37,7 +50,7 @@ function SearchTrips() {
             </div>
             <div className="m-8">
                 <div className="w-full mb-4">
-                <select className="select w-1/2 max-w-xs bg-green-100">
+                <select className="select w-1/2 max-w-xs bg-green-100" onChange={(e) => setCurrency(e.target.value)} value={currency}>
                         <option>EUR</option>
                         <option>USD</option>
                         <option>GBP</option>
@@ -65,7 +78,7 @@ function SearchTrips() {
                                 <td>{trip.toCity}</td>
                                 <td>{trip.dateTrip}</td>
                                 <td>{trip.timeTrip}</td>
-                                <td>{trip.price}</td>
+                                <td>{trip.price.toFixed(2)}{currency}</td>
                                 <td><button onClick={() => handleClick(trip.id)} className="btn btn-primary m-4">Reserve</button></td>
                             </tr>
                             ))}

@@ -6,7 +6,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Map;
 
 @Component
-public class ExchangedService {
+public class ExchangeRateClient {
     private RestTemplate restTemplate = new RestTemplate();
     private final String apiKey = "a439deea942651e54ad0ed50";
     private final String baseUrl = "https://v6.exchangerate-api.com/v6/" + apiKey + "/latest/EUR";

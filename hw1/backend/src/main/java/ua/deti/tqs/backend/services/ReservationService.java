@@ -12,11 +12,13 @@ public class ReservationService {
    @Autowired
    private ReservationRepository reservationRepository;
    
-    public Reservation saveReservation(Reservation reservation) {
+    public Reservation saveReservation(Reservation reservation) { 
         return reservationRepository.save(reservation);
     }
 
     public Reservation findReservationByToken(String token) {
+        System.out.println("Token: " + token);
+        System.out.println("Reservation: " + reservationRepository.findByToken(token));
          return reservationRepository.findByToken(token);
     }
 

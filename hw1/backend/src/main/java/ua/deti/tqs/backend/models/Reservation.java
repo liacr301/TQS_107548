@@ -22,6 +22,9 @@ public class Reservation {
     private String lastName;
     private String email;
 
+    public Reservation() {
+    }
+
     public Reservation(String token, String fromCity, String toCity, String dateTrip, String timeTrip, String firstName, String lastName, String email) {
         this.token = token;
         this.fromCity = fromCity;

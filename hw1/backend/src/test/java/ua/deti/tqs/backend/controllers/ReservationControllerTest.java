@@ -24,6 +24,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 @WebMvcTest(ReservationController.class)
 public class ReservationControllerTest {
@@ -71,6 +74,9 @@ public class ReservationControllerTest {
         when(tripService.findTripById(1)).thenReturn(mockTrip);
         when(reservationService.saveReservation(any(Reservation.class))).thenReturn(mockReservation);
 
+        // Configuração do mock para retornar o token esperado
+        when(reservationService.generateToken()).thenReturn("token123");
+
         mvc.perform(post("/api/reservations/save")
                 .param("tripId", "1")
                 .param("firstName", "John")
@@ -78,14 +84,15 @@ public class ReservationControllerTest {
                 .param("email", "john@example.com")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.token", is(mockReservation.getToken())))
-                .andExpect(jsonPath("$.fromCity", is(mockReservation.getFromCity())))
-                .andExpect(jsonPath("$.toCity", is(mockReservation.getToCity())))
-                .andExpect(jsonPath("$.dateTrip", is(mockReservation.getDateTrip())))
-                .andExpect(jsonPath("$.timeTrip", is(mockReservation.getTimeTrip())))
-                .andExpect(jsonPath("$.firstName", is(mockReservation.getFirstName())))
-                .andExpect(jsonPath("$.lastName", is(mockReservation.getLastName())))
-                .andExpect(jsonPath("$.email", is(mockReservation.getEmail())));
+                .andExpect(jsonPath("$.token", is("token123"))) // Verifique se esta linha está correta
+                // Outras verificações
+                .andExpect(jsonPath("$.reservation.fromCity", is(mockReservation.getFromCity())))
+                .andExpect(jsonPath("$.reservation.toCity", is(mockReservation.getToCity())))
+                .andExpect(jsonPath("$.reservation.dateTrip", is(mockReservation.getDateTrip())))
+                .andExpect(jsonPath("$.reservation.timeTrip", is(mockReservation.getTimeTrip())))
+                .andExpect(jsonPath("$.reservation.firstName", is(mockReservation.getFirstName())))
+                .andExpect(jsonPath("$.reservation.lastName", is(mockReservation.getLastName())))
+                .andExpect(jsonPath("$.reservation.email", is(mockReservation.getEmail())));
     }
 
     @Test

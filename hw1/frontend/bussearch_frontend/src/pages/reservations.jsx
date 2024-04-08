@@ -7,7 +7,8 @@ function Reservations() {
 
     useEffect(() => {
         if (token !== '') {
-            fetch(`/api/reservations/${token}`)
+            console.log("token: ", token)
+            fetch(`http://localhost:8002/api/reservations/${token}`)
                 .then(response => {
                     if (response.ok) {
                         return response.json();
@@ -25,7 +26,7 @@ function Reservations() {
                 });
         }
     }, [token]);
-
+    console.log("reservation: ", reservation)
     return (
         <div className='web_page'>
             <div className="navbar bg-green-100 flex justify-between">
@@ -43,8 +44,8 @@ function Reservations() {
                                 <h2 className="card-title">TRIP</h2>
                                 <p>FROM: {reservation.fromCity}</p>
                                 <p>TO: {reservation.toCity}</p>
-                                <p>DATE: {reservation.date}</p>
-                                <p>TIME: {reservation.time}</p>
+                                <p>DATE: {reservation.dateTrip}</p>
+                                <p>TIME: {reservation.timeTrip}</p>
                                 <p>FIRST NAME: {reservation.firstName}</p>
                                 <p>LAST NAME: {reservation.lastName}</p>
                                 <p>EMAIL: {reservation.email}</p>
