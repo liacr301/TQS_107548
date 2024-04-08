@@ -10,13 +10,14 @@ function SearchTrips() {
     const navigate = useNavigate();
 
     const handleClick = (tripId) => {
-        navigate('/user-details', { state: { tripId } });
+        navigate('/user_details', { state: { tripId } });
     };
 
     useEffect(() => {
+        console.log(state);
         const fetchData = async () => {
             const response = await fetch(
-                `http://localhost:8001/api/trips/search_for_all?fromCity=${state.fromCity}&toCity=${state.toCity}&dateTrip=${state.dateTrip}`,
+                `http://localhost:8002/api/trips/all_for_search?fromCity=${state.fromCity}&toCity=${state.toCity}&dateTrip=${state.dateTrip}`,
                 { method: "GET" }
             );
             const data = await response.json();
@@ -31,7 +32,7 @@ function SearchTrips() {
     return (
         <div className="web_page">
             <div className="navbar bg-green-100 flex justify-between">
-                <a className="btn btn-ghost text-xl">Bus Search</a>
+                <a className="btn btn-ghost text-xl" href="/trips">Bus Search</a>
                 <a className="btn btn-ghost text-xl" href='./reservations'>See your reservations</a>
             </div>
             <div className="m-8">
@@ -62,8 +63,8 @@ function SearchTrips() {
                                 <td>{trip.bus}</td>
                                 <td>{trip.fromCity}</td>
                                 <td>{trip.toCity}</td>
-                                <td>{trip.date}</td>
-                                <td>{trip.time}</td>
+                                <td>{trip.dateTrip}</td>
+                                <td>{trip.timeTrip}</td>
                                 <td>{trip.price}</td>
                                 <td><button onClick={() => handleClick(trip.id)} className="btn btn-primary m-4">Reserve</button></td>
                             </tr>

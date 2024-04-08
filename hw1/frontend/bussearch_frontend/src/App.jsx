@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "./components/navbar.jsx";
 import HomePage from "./pages/homepage.jsx";
 import Trips from "./pages/trips.jsx";
 import SearchTrips from "./pages/search_trips.jsx";
@@ -39,7 +38,7 @@ function App() {
           }
         />
         <Route
-          path="/user_details/:tripId"
+          path="/user_details"
           element={
               <UserDetails />
           }

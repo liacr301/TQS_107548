@@ -4,14 +4,15 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
 function Trips() {
-    const [fromCity, setFromCity] = useState('');
-    const [toCity, setToCity] = useState('');
+    const [fromCity, setFromCity] = useState('Aveiro');
+    const [toCity, setToCity] = useState('Aveiro');
     const [dateTrip, setDateTrip] = useState(new Date());
     const navigate = useNavigate();
 
     const handleSearch = async () => {
-
-        const formattedDate = dateTrip.toISOString().split('T')[0];
+        const adjustedDate = new Date(dateTrip.getTime());
+        adjustedDate.setMinutes(adjustedDate.getMinutes() - adjustedDate.getTimezoneOffset());
+        const formattedDate = adjustedDate.toISOString().split('T')[0];
 
         if (fromCity === toCity) {
             alert('Please select different cities for departure and arrival.');
@@ -19,12 +20,14 @@ function Trips() {
         }
 
         navigate('/search_trips', { state: { fromCity, toCity, dateTrip: formattedDate } });
+        console.log('Search trips');
+        console.log(fromCity, toCity, formattedDate);
     };
 
     return (
         <div className="web_page">
             <div className="navbar bg-green-100 flex justify-between">
-                <a className="btn btn-ghost text-xl">Bus Search</a>
+                <a className="btn btn-ghost text-xl" href="/trips">Bus Search</a>
                 <a className="btn btn-ghost text-xl" href='./reservations'>See your reservations</a>
             </div>
 
