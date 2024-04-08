@@ -16,7 +16,7 @@ public class ReservationService {
         return reservationRepository.save(reservation);
     }
 
-    public Reservation findReservationById(String token) {
+    public Reservation findReservationByToken(String token) {
          return reservationRepository.findByToken(token);
     }
 

@@ -19,7 +19,13 @@ public class TripService {
         return tripRepository.findById(id);
     }
 
+    public List<Trip> showAllTrips() {
+        return tripRepository.findAll();
+    }
+
     public List<Trip> findTripByFromCityToCityAndDateTrip(String fromCity, String toCity, String dateTrip) {
+        System.out.println("fromCity: " + fromCity + " toCity: " + toCity + " dateTrip: " + dateTrip);
+        System.out.println(tripRepository.findByFromCityAndToCityAndDateTrip(fromCity, toCity, dateTrip));
         return tripRepository.findByFromCityAndToCityAndDateTrip(fromCity, toCity, dateTrip);
     }
     

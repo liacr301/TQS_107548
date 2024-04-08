@@ -14,6 +14,9 @@ import jakarta.persistence.EntityNotFoundException;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,35 +40,37 @@ public class ReservationController {
     @Autowired
     private TripService tripService;
 
-    @GetMapping("/{Token}")
-    ResponseEntity<Reservation> getReservationByToken(@PathVariable(value = "Token") String Token){
-        return ResponseEntity.ok().body(reservationService.findReservationById(Token));
+    @GetMapping("/{token}")
+    ResponseEntity<Reservation> getReservationByToken(@PathVariable(value = "token") String token){
+        return ResponseEntity.ok().body(reservationService.findReservationByToken(token));
     }
 
     @PostMapping("/save")
-public ResponseEntity<Reservation> saveReservation(@RequestParam int tripId, @RequestParam String firstName, @RequestParam String lastName, @RequestParam String email) {
-    if (firstName == null || lastName == null || email == null) {
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+    public ResponseEntity<Map<String, Object>> saveReservation(@RequestParam int tripId, @RequestParam String firstName, @RequestParam String lastName, @RequestParam String email) {
+        if (firstName == null || lastName == null || email == null || firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+        }
+        
+        String token = reservationService.generateToken();
+        Trip dataParts;
+        try {
+            dataParts = tripService.findTripById(tripId);
+        } catch (EntityNotFoundException e) {
+            logger.error("Trip not found for id: {}", tripId, e);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+        
+        String fromCity = dataParts.getFromCity();
+        String toCity = dataParts.getToCity();
+        String date = dataParts.getDateTrip();
+        String time = dataParts.getTimeTrip();
+        Reservation reservation = new Reservation(token, fromCity, toCity, date, time, firstName, lastName, email);
+        Reservation savedReservation = reservationService.saveReservation(reservation);
+        
+        Map<String, Object> response = new HashMap<>();
+        response.put("reservation", savedReservation);
+        response.put("token", token);
+        
+        return ResponseEntity.ok().body(response);
     }
-
-    if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
-    }
-    String token = reservationService.generateToken();
-    Trip dataParts;
-    try {
-        dataParts = tripService.findTripById(tripId);
-    } catch (EntityNotFoundException e) {
-        logger.error("Trip not found for id: {}", tripId, e);
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-    }
-    
-    String fromCity = dataParts.getFromCity();
-    String toCity = dataParts.getToCity();
-    String date = dataParts.getDateTrip();
-    String time = dataParts.getTimeTrip();
-    Reservation reservation = new Reservation(token, fromCity, toCity, date, time, firstName, lastName, email);
-    return ResponseEntity.ok().body(reservationService.saveReservation(reservation));
-}
-
 }

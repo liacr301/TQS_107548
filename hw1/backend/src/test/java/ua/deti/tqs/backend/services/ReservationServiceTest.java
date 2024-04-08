@@ -57,7 +57,7 @@ public class ReservationServiceTest {
         Reservation reservation = new Reservation(token, "Aveiro", "Porto", "2021-03-01", "10:00", "John", "Doe", "john.doe@example.com");
         when(reservationRepository.findByToken(token)).thenReturn(reservation);
 
-        Reservation foundReservation = reservationService.findReservationById(token);
+        Reservation foundReservation = reservationService.findReservationByToken(token);
 
         assertEquals(token, foundReservation.getToken());
         assertEquals("Aveiro", foundReservation.getFromCity());

@@ -51,9 +51,9 @@ public class ReservationControllerTest {
         String token = "testToken123";
         Reservation reservation = new Reservation(token, "Aveiro", "Porto", "2021-03-01", "10:00", "John", "Doe", "john.doe@example.com");
 
-        when(reservationService.findReservationById(token)).thenReturn(reservation);
+        when(reservationService.findReservationByToken(token)).thenReturn(reservation);
 
-        mvc.perform(get("/api/reservations/{Token}", token)
+        mvc.perform(get("/api/reservations/{token}", token)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.token", is(reservation.getToken())))

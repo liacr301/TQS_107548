@@ -69,7 +69,7 @@ public class TripControllerTest {
         when(tripService.findTripByFromCityToCityAndDateTrip(anyString(), anyString(), anyString())).thenReturn(allTripsWithSpecifications);
 
         mvc.perform(
-                get("/api/trips/all_for_search?fromCity=Aveiro&toCity=Lisboa&date=2021-03-08").contentType(MediaType.APPLICATION_JSON))
+                get("/api/trips/all_for_search?fromCity=Aveiro&toCity=Lisboa&dateTrip=2021-03-08").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$[0].bus", is(trip1.getBus())))

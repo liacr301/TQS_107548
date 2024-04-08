@@ -52,5 +52,9 @@ public class TripController {
         return ResponseEntity.ok().body(tripService.findTripByFromCityToCityAndDateTrip(fromCity, toCity, dateTrip));
     }    
     
+    @GetMapping("/all")
+    public ResponseEntity<List<Trip>> getAllTrips() {
+        return ResponseEntity.ok().body(tripService.showAllTrips());
+    }
 
 }
