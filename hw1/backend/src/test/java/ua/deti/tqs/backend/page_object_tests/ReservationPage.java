@@ -11,9 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ReservationPage {
     private WebDriver driver;
 
-    @FindBy(css = "tr:nth-child(1) .btn")
-    private WebElement reserveButton;
-
     @FindBy(css = ".input:nth-child(1)")
     private WebElement firstNameInput;
 
@@ -35,7 +32,6 @@ public class ReservationPage {
     }
 
     public void makeReservation(String firstName, String lastName, String email) {
-        reserveButton.click();
         firstNameInput.sendKeys(firstName);
         lastNameInput.sendKeys(lastName);
         emailInput.sendKeys(email);

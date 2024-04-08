@@ -27,7 +27,6 @@ public class TestingFrontendTest {
         homePage.selectToCity("//option[. = 'Viseu']");
         homePage.selectDateAndSearch();
 
-        // Aguarda até que o botão de reserva na primeira linha da tabela esteja visível e então clica nele
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         reservationPage.clickOnFirstReserveButton(wait);
 
