@@ -24,10 +24,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import java.util.HashMap;
-import java.util.Map;
-
-
 @WebMvcTest(ReservationController.class)
 public class ReservationControllerTest {
     @Autowired
@@ -117,5 +113,20 @@ public class ReservationControllerTest {
                 .param("email", "john@example.com")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isBadRequest());
+    }
+
+    @Test
+    public void whenSaveReservationWithNoAvailableSeats_thenConflict() throws Exception {
+        Trip noAvailableSeatsTrip = new Trip(1, "Aveiro", "Porto", "2021-03-01", "10:00", 10.0, 0);
+        when(tripService.findTripById(1)).thenReturn(noAvailableSeatsTrip);
+
+        mvc.perform(post("/api/reservations/save")
+                .param("tripId", "1")
+                .param("firstName", "John")
+                .param("lastName", "Doe")
+                .param("email", "john@example.com")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isConflict())
+                .andExpect(jsonPath("$.error", is("No available seats")));
     }
 }

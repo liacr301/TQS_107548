@@ -68,6 +68,7 @@ function SearchTrips() {
                             <th>Date</th>
                             <th>Time</th>
                             <th>Price</th>
+                            <th>Seats Available</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -79,6 +80,7 @@ function SearchTrips() {
                                 <td>{trip.dateTrip}</td>
                                 <td>{trip.timeTrip}</td>
                                 <td>{trip.price.toFixed(2)}{currency}</td>
+                                <td>{trip.availableSeats}</td>
                                 <td><button onClick={() => handleClick(trip.id)} className="btn btn-primary m-4">Reserve</button></td>
                             </tr>
                             ))}

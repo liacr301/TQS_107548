@@ -6,23 +6,24 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+
+import static org.mockito.ArgumentMatchers.anyInt;
+
 import static org.mockito.Mockito.when;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import ua.deti.tqs.backend.models.Reservation;
+import ua.deti.tqs.backend.models.Trip;
 import ua.deti.tqs.backend.dao.ReservationRepository;
-import ua.deti.tqs.backend.services.ReservationService;
+import ua.deti.tqs.backend.dao.TripRepository;
 
 @ExtendWith(MockitoExtension.class)
 public class ReservationServiceTest {
@@ -32,6 +33,9 @@ public class ReservationServiceTest {
 
     @InjectMocks
     private ReservationService reservationService;
+    
+    @Mock
+    private TripRepository tripRepository;
 
     @Test
     public void testSaveReservation() {
@@ -77,4 +81,5 @@ public class ReservationServiceTest {
         assertEquals(32, token.length());
         assertNotNull(token);
     }
+
 }
