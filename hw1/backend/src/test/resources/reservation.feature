@@ -4,7 +4,7 @@ Feature: Reservation Feature
   I want to create a reservation
 
   Scenario: User makes a reservation
-    Given the user navigates to the trips page
+    Given the user user navigates to trips page by opening Firefox
     When the user selects a trip from "Aveiro" to "Viseu" and the date "2024-04-12"
     And selects the option with the time "11:00:00" and price "35.00"
     And the user fills in the reservation details with "Lia", "Lima", "hvjbdk@gmail.com"
